@@ -106,10 +106,10 @@ public:
 	int start();
 	int stop();
 
+	~Camera();
 private:
 	Camera(PipelineHandler *pipe, const std::string &id,
 	       const std::set<Stream *> &streams);
-	~Camera();
 
 	friend class PipelineHandler;
 	void disconnect();
