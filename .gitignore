@@ -6,3 +6,5 @@ build/
 patches/
 *.patch
 *.pyc
+subprojects/packagecache/
+subprojects/pybind11-2.3.0/

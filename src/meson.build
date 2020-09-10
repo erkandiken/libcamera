@@ -23,3 +23,4 @@ if get_option('v4l2')
 endif
 
 subdir('gstreamer')
+subdir('py')
