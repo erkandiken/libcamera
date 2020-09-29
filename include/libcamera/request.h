@@ -56,6 +56,7 @@ public:
 
 	bool hasPendingBuffers() const { return !pending_.empty(); }
 
+        std::shared_ptr<Camera> camera() const;
 private:
 	friend class PipelineHandler;
 
