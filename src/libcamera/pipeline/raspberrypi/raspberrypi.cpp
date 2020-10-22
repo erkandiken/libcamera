@@ -1340,6 +1340,7 @@ void RPiCameraData::unicamBufferDequeue(FrameBuffer *buffer)
 
 	/* The buffer must belong to one of our streams. */
 	ASSERT(stream);
+	assert(stream);
 
 	LOG(RPI, Debug) << "Stream " << stream->name() << " buffer dequeue"
 			<< ", buffer id " << index
@@ -1410,6 +1411,7 @@ void RPiCameraData::ispOutputDequeue(FrameBuffer *buffer)
 
 	/* The buffer must belong to one of our ISP output streams. */
 	ASSERT(stream);
+	assert(stream);
 
 	LOG(RPI, Debug) << "Stream " << stream->name() << " buffer complete"
 			<< ", buffer id " << index

@@ -257,7 +257,8 @@ void Object::moveToThread(Thread *thread)
 
 	notifyThreadMove();
 
-	thread->moveObject(this);
+	// clang-tidy thinks that the thread can be deleted via DeferredDelete handling in notifyThreadMove()
+	thread->moveObject(this); // NOLINT: warning: Use of memory after it is freed [clang-analyzer-cplusplus.NewDelete]
 }
 
 void Object::notifyThreadMove()

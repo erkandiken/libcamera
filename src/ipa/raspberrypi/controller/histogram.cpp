@@ -51,7 +51,7 @@ double Histogram::InterQuantileMean(double q_lo, double q_hi) const
 	double p_lo = Quantile(q_lo);
 	double p_hi = Quantile(q_hi, (int)p_lo);
 	double sum_bin_freq = 0, cumul_freq = 0;
-	for (double p_next = floor(p_lo) + 1.0; p_next <= ceil(p_hi);
+	for (double p_next = floor(p_lo) + 1.0; p_next <= ceil(p_hi); // NOLINT: Variable 'p_next' with floating point type 'double' should not be used as a loop counter [clang-analyzer-security.FloatLoopCounter]
 	     p_lo = p_next, p_next += 1.0) {
 		int bin = floor(p_lo);
 		double freq = (cumulative_[bin + 1] - cumulative_[bin]) *

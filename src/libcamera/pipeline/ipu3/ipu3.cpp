@@ -513,6 +513,7 @@ int PipelineHandlerIPU3::configure(Camera *camera, CameraConfiguration *c)
 	 * be at least one active stream in the configuration request).
 	 */
 	if (!vfCfg) {
+		assert(mainCfg);
 		ret = imgu->configureViewfinder(*mainCfg, &outputFormat);
 		if (ret)
 			return ret;

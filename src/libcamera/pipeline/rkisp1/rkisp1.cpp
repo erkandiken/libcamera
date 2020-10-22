@@ -379,6 +379,8 @@ protected:
 		if (!info)
 			LOG(RkISP1, Fatal) << "Frame not known";
 
+		assert(info);
+
 		/*
 		 * \todo: If parameters are not filled a better method to handle
 		 * the situation than queuing a buffer with unknown content

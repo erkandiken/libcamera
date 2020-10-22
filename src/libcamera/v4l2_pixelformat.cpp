@@ -163,7 +163,7 @@ std::string V4L2PixelFormat::toString() const
 	}
 
 	if (fourcc_ & (1 << 31))
-		strcat(ss, "-BE");
+		memcpy(ss + 4, "-BE", 3);
 
 	return ss;
 }
