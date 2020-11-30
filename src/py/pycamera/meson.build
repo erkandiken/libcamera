@@ -32,6 +32,8 @@ pycamera = shared_module('pycamera',
                          dependencies : pycamera_deps,
                          cpp_args : pycamera_args)
 
+# XXX > You could also create a symlink. There's an example in the top-level
+# > meson.build.
 # Copy __init__.py to build dir so that we can run without installing
 configure_file(input: '__init__.py', output: '__init__.py', copy: true)
 
