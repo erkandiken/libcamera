@@ -1,3 +1,10 @@
+/* SPDX-License-Identifier: LGPL-2.1-or-later */
+/*
+ * Copyright (C) 2020, Tomi Valkeinen <tomi.valkeinen@iki.fi>
+ *
+ * pymain.cpp - Python bindings
+ */
+
 #include <chrono>
 #include <thread>
 #include <fcntl.h>
