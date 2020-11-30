@@ -35,4 +35,4 @@ pycamera = shared_module('pycamera',
 # Copy __init__.py to build dir so that we can run without installing
 configure_file(input: '__init__.py', output: '__init__.py', copy: true)
 
-install_data(['__init__.py'], install_dir: destdir)
+install_data(['__init__.py'], install_dir : destdir)
