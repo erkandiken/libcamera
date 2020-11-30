@@ -44,7 +44,7 @@ static py::object ControlValueToPy(const ControlValue &cv)
 	}
 }
 
-static ControlValue PyToControlValue(py::object &ob, ControlType type)
+static ControlValue PyToControlValue(const py::object &ob, ControlType type)
 {
 	switch (type) {
 	case ControlTypeBool:
