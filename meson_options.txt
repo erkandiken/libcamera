@@ -40,4 +40,7 @@ option('v4l2',
         value : false,
         description : 'Compile the V4L2 compatibility layer')
 
-option('pycamera', type : 'feature', value : 'auto')
+option('pycamera',
+        type : 'feature',
+        value : 'auto',
+        description : 'Enable libcamera Python bindings')
